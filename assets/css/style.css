@@ -1,16 +1,12 @@
+/* the body shows the background image, has a padding of 20px, and has an opacity of .95*/
 body {
     padding: 20px;
-    opacity: .80;
+    opacity: .95;
     background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/mgW44id/videoblocks-cg-animation-of-color-powder-explosion-on-black-background-slow-motion-movement-with-acceleration-in-the-beginning-has-alpha-matte_bxvijlb9g_thumbnail-full01.png");
 }
-
+/* the crystal images are positioned, and aligned to center */
 .crystalimages {
     position:relative;
     top: -20px;
     text-align: center;
-}
-
-.totalscore {
-    position: relative;
-    top: -50px;
 }
