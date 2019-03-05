@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Crystal Collecter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="assets/javascript/game.js">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.js"
+  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+  crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -39,21 +43,22 @@
 
     <!-- This where all the images for the crystals are located. They are all in one div, which has a class, it is being styled/moved in css. -->
     <div class="crystalimages">
-        <img src="assets/images/blue crystal.jpg" alt="Blue crystal" height="100" width="100">
-        <img src="assets/images/green crystal.png" alt="Green crystal" height="100" width="100">
-        <img src="assets/images/red crystal.jpg" alt="Red crystal" height="100" width="100">
-        <img src="assets/images/yellow crystal.png" alt="Yellow crystal" height="100" width="100">
+        <img src="assets/images/blue crystal.jpg" alt="Blue crystal" height="100" width="100" id="blueCrystal">
+        <img src="assets/images/green crystal.png" alt="Green crystal" height="100" width="100" id="greenCrystal">
+        <img src="assets/images/red crystal.jpg" alt="Red crystal" height="100" width="100" id="redCrystal">
+        <img src="assets/images/yellow crystal.png" alt="Yellow crystal" height="100" width="100" id="yellowCrystal">
     </div>
 
 
     <!-- card title used to display the number being guessed. -->
     <div class="card text-center">
         <div class="card-header">
-
         </div>
         <div class="card-body">
             <h5 class="card-title">Use the crystals above to match the number below!</h5>
-            <p class="card-text">15</p>
+            <span id="computerChoice">
+
+            </span>
         </div>
         <div class="card-footer text-muted">
 
@@ -63,9 +68,9 @@
     <br>
 
     <!-- This is where the total score lives. It is a success alert from bootstap. -->
-    <div class="alert alert-success" role="alert">
+    <!-- <div class="alert alert-success" role="alert" id="TotalScore">
         Your total score is:
-    </div>
+    </div> -->
 
 
     <!-- This is the users number/guess that is changing when the crystals are pressed. -->
@@ -74,8 +79,9 @@
         </div>
         <div class="card-body">
             <h5 class="card-title">This is your guess! (Don't go over the number provided)</h5>
-            <p class="card-text">15</p>
+            <span id="userGuess">
 
+            </span>
         </div>
         <div class="card-footer text-muted">
 
@@ -86,24 +92,19 @@
 
     <!-- This is the wins alert -->
     <div class="alert alert-dark" role="alert">
+       
         Wins:
+        <span id="Wins">
+        </span>
     </div>
 
     <!-- This is the losses alert -->
     <div class="alert alert-dark" role="alert">
+        
         Losses:
+        <span id="Losses">
+        </span>
     </div>
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
