@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Collecter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/javascript/game.js">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- This is the header (jumbotron/bootstrap). There is a welcome message, and intructions. The intructions are in and unorederd list.-->
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to Crystal Collecter!</h1>
+
+        <hr class="my-4">
+        <p>
+            <ul>
+                <li>You will be give a random number at the start of the game.</li>
+                <br>
+                <li>There are four crystals below. By clicking on a crystal you will add a specific amount of points to
+                    your total score.</li>
+                <br>
+                <li>You win the game by matching your total score to random number, you lose the game if your total
+                    score goes above the random number.</li>
+                <br>
+                <li>The value of each crystal is hidden from you until you click on it.</li>
+                <br>
+                <li>Each time when the game starts, the game will change the values of each crystal.</li>
+            </ul>
+        </p>
+
+    </div>
+
+    <!-- This where all the images for the crystals are located. They are all in one div, which has a class, it is being styled/moved in css. -->
+    <div class="crystalimages">
+        <img src="assets/images/blue crystal.jpg" alt="Blue crystal" height="100" width="100">
+        <img src="assets/images/green crystal.png" alt="Green crystal" height="100" width="100">
+        <img src="assets/images/red crystal.jpg" alt="Red crystal" height="100" width="100">
+        <img src="assets/images/yellow crystal.png" alt="Yellow crystal" height="100" width="100">
+    </div>
+
+
+    <!-- card title used to display the number being guessed. -->
+    <div class="card text-center">
+        <div class="card-header">
+
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Use the crystals above to match the number below!</h5>
+            <p class="card-text">15</p>
+        </div>
+        <div class="card-footer text-muted">
+
+        </div>
+    </div>
+
+    <br>
+
+    <!-- This is where the total score lives. It is a success alert from bootstap. -->
+    <div class="alert alert-success" role="alert">
+        Your total score is:
+    </div>
+
+
+    <!-- This is the users number/guess that is changing when the crystals are pressed. -->
+    <div class="card text-center">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">This is your guess! (Don't go over the number provided)</h5>
+            <p class="card-text">15</p>
+
+        </div>
+        <div class="card-footer text-muted">
+
+        </div>
+    </div>
+
+    <br>
+
+    <!-- This is the wins alert -->
+    <div class="alert alert-dark" role="alert">
+        Wins:
+    </div>
+
+    <!-- This is the losses alert -->
+    <div class="alert alert-dark" role="alert">
+        Losses:
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
